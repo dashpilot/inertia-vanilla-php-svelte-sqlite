@@ -57,7 +57,7 @@
         <div class="footer-content">
             <div class="footer-logo">
                 <span class="logo-text">Inertia<span class="logo-accent">Blog</span></span>
-                <p class="footer-tagline">A beautiful blog showcasing the power of Inertia.js with PHP and Svelte.</p>
+                <p class="footer-tagline">A blog showcasing the power of Inertia.js with Vanilla PHP, Svelte and SQLite.</p>
             </div>
 
             <div class="footer-links-container">
@@ -93,7 +93,7 @@
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2023 Inertia Blog. All rights reserved.</p>
+            <p>&copy; 2025 Inertia Blog. All rights reserved.</p>
             <p>Made with care for developers everywhere</p>
         </div>
     </footer>
