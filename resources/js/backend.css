@@ -1,0 +1,281 @@
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    border: 1px solid #eaeaea;
+}
+
+.form-header {
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.form-header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+
+.form-header p {
+    color: #666;
+    font-size: 16px;
+    margin: 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 200px;
+    line-height: 1.5;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+
+.input-error {
+    border-color: #e53e3e !important;
+}
+
+.error-message {
+    color: #e53e3e;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.help-text {
+    color: #718096;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.button:active {
+    transform: translateY(1px);
+}
+
+.button-primary {
+    background-color: #4f46e5;
+    color: white;
+    border: 1px solid transparent;
+}
+
+.button-primary:hover {
+    background-color: #4338ca;
+}
+
+.button-secondary {
+    background-color: white;
+    color: #4b5563;
+    border: 1px solid #d1d5db;
+}
+
+.button-secondary:hover {
+    background-color: #f9fafb;
+}
+
+.button-danger {
+    background-color: white;
+    color: #dc2626;
+    border: 1px solid #f87171;
+}
+
+.button-danger:hover {
+    background-color: #fee2e2;
+}
+
+.button-full {
+    width: 100%;
+    display: block;
+}
+
+.error-box {
+    background-color: #FEF2F2;
+    border-left: 4px solid #EF4444;
+    border-radius: 4px;
+    padding: 16px;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.error-icon {
+    flex-shrink: 0;
+    color: #F87171;
+}
+
+.error-content {
+    margin-left: 12px;
+}
+
+.error-content h3 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #991B1B;
+    margin: 0 0 8px 0;
+}
+
+.error-content ul {
+    margin: 0;
+    padding-left: 16px;
+}
+
+.error-content li {
+    color: #B91C1C;
+    font-size: 14px;
+}
+
+/* Auth specific styles */
+.auth-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.redirect-text {
+    font-size: 14px;
+    color: #666;
+    margin-top: 16px;
+}
+
+.redirect-text a {
+    color: #4f46e5;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.redirect-text a:hover {
+    text-decoration: underline;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox-label input {
+    margin-right: 8px;
+}
+
+.checkbox-label span {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Modal styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.modal {
+    background-color: white;
+    border-radius: 8px;
+    padding: 24px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.modal h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #111827;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.modal p {
+    color: #4b5563;
+    margin-bottom: 20px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.logout-form {
+    margin: 0;
+    padding: 0;
+}
+
+.logout-button {
+    background: none;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    padding: 0;
+    font-family: inherit;
+}
+
+.logout-button:hover {
+    color: #4f46e5;
+}

@@ -1,0 +1,25 @@
+{
+    "name": "inertia-vanilla-php-svelte",
+    "version": "1.0.0",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "dev:vite": "vite",
+        "dev:php": "php -S localhost:8000 -t public",
+        "dev": "concurrently \"npm run dev:vite\" \"npm run dev:php\"",
+        "build": "vite build"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "dependencies": {
+        "@inertiajs/svelte": "^2.0.5"
+    },
+    "devDependencies": {
+        "@sveltejs/vite-plugin-svelte": "^5.0.3",
+        "concurrently": "^9.1.2",
+        "svelte": "^5.23.1",
+        "vite": "^6.2.2"
+    }
+}
