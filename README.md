@@ -11,6 +11,10 @@ A modern blog application built with Inertia.js, Svelte 5, and PHP without any f
 -   **Authentication System** for user management
 -   **Clean, Modern Design** inspired by the Inertia.js website
 
+## Preview
+
+<img src="public/preview.png" />
+
 ## Setup
 
 ```bash
