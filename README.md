@@ -36,6 +36,19 @@ This will start:
 -   PHP development server at http://localhost:8000
 -   Vite dev server at http://localhost:3000
 
+### Production
+
+Build your assets for production:
+
+```bash
+# Build optimized assets
+npm run build
+```
+
+Set `$isProduction` in `config.php` to true
+
+Then deploy your application to your production server. In production, all assets are served directly from the `public/assets` directory.
+
 ## Project Structure
 
 ```
