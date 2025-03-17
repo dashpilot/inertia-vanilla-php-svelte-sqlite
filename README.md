@@ -1,89 +1,103 @@
-# Inertia for Vanilla PHP with Svelte 5
+# Inertia Blog
 
-A lightweight implementation of Inertia.js v2 with plain PHP and Svelte 5. No frameworks required.
+A modern blog application built with Inertia.js, Svelte 5, and PHP without any framework dependencies.
 
-This version uses Svelte, but there's also a [Vue version](https://github.com/dashpilot/inertia-vanilla-php)
+## Features
 
-## Why?
+-   **Modern SPA Experience** without the complexity of a traditional SPA setup
+-   **No PHP Framework Required** - just vanilla PHP with a router
+-   **Svelte 5 Frontend** with latest component patterns
+-   **SQLite Database** for simple data persistence
+-   **Authentication System** for user management
+-   **Clean, Modern Design** inspired by the Inertia.js website
 
-Modern PHP comes with many powerful features built-in:
-
--   Database connections with PDO
--   Session handling
--   File system operations
--   Array functions and more
-
-This project leverages these capabilities while adding just what you need to build modern SPAs:
-
--   **Simple but powerful** - Just PHP, a router, and Inertia.js
--   **No framework overhead** - Use PHP's built-in features directly
--   **Modern UX** - SPA-like experience without building a separate API
--   **Lightweight** - Understand your entire codebase without framework complexity
--   **Svelte 5 Ready** - Uses the latest Svelte 5 with Inertia.js v2
-
-## Installation
+## Setup
 
 ```bash
-# Clone the repository using degit (no git history)
-npx degit dashpilot/inertia-vanilla-php-svelte my-project
+# Download the repository
+npx degit https://github.com/dashpilot/inertia-vanilla-php-svelte-sqlite
 
-# Navigate to project directory and install dependencies
-cd my-project
+# Install PHP dependencies
 composer install
+
+# Install JavaScript dependencies
 npm install
-```
 
-## Usage
-
-### Development
-
-Run both the Vite dev server and PHP server concurrently:
-
-```bash
-# Start both servers with a single command
+# Start the development servers
 npm run dev
 ```
 
 This will start:
 
 -   PHP development server at http://localhost:8000
--   Vite dev server (for assets) at http://localhost:3000
+-   Vite dev server at http://localhost:3000
 
-Always access your app through http://localhost:8000
+## Project Structure
 
-### Production
-
-Build your assets for production:
-
-```bash
-# Build optimized assets
-npm run build
 ```
-
-Then deploy your application to your production server. In production, all assets are served directly from the `public/assets` directory.
+inertia-blog/
+├── composer.json
+├── package.json
+├── vite.config.js
+├── database/
+│   └── blog.sqlite
+├── public/
+│   ├── index.php
+│   ├── assets/
+│   └── .htaccess
+├── resources/
+│   ├── js/
+│   │   ├── app.js
+│   │   ├── Pages/
+│   │   │   ├── Home.svelte
+│   │   │   ├── Posts/
+│   │   │   ├── About.svelte
+│   │   │   ├── Contact.svelte
+│   │   │   └── Dashboard.svelte
+│   │   └── Components/
+│   │       ├── Layout.svelte
+│   │       └── PostCard.svelte
+│   └── views/
+│       └── app.php
+├── routes/
+│   └── web.php
+├── src/
+│   ├── Inertia.php
+│   ├── Database.php
+│   ├── Middleware/
+│   │   └── Auth.php
+│   └── Models/
+│       ├── Post.php
+│       └── User.php
+└── bootstrap.php
+```
 
 ## How It Works
 
-1. Use the PHP router to define routes
-2. Return page data with `Inertia::render('PageName', ['prop' => 'value'])`
-3. Inertia.js handles client-side page transitions, history, and state
+1. Requests are handled by the PHP server via `routes/web.php`
+2. Route handlers use `Inertia::render()` to return data to the client
+3. Inertia.js manages the frontend, updating components without full page reloads
+4. SQLite database stores blog posts and user accounts
+5. Authentication is managed through PHP sessions
 
-## Svelte 5 Implementation
+## Key Components
 
-This implementation is specifically configured to work with Svelte 5 and Inertia.js v2, using:
+-   **Layout.svelte**: Main site layout with navigation and auth handling
+-   **Home.svelte**: Landing page with featured content
+-   **Posts/**: Blog post listing, creation, editing, and viewing
+-   **Dashboard.svelte**: User dashboard with post management
+-   **About.svelte & Contact.svelte**: Static information pages
 
--   The new component initialization approach with `mount` from Svelte
--   Modern Inertia directives like `use:inertia` for links
--   Proper TypeScript support (optional)
--   Full hot module replacement (HMR) for development
+## Why This Approach?
 
-## Backend PHP Structure
+This project demonstrates that you can build modern, reactive web applications without heavy framework dependencies. By combining vanilla PHP with Inertia.js and Svelte, you get:
 
-The PHP backend remains simple and focused:
+-   Full control over your code without framework constraints
+-   Excellent performance without excessive abstraction layers
+-   Simpler debugging with less magic happening behind the scenes
+-   A smaller, more focused codebase that's easier to understand
 
--   A router for defining server routes
--   An Inertia adapter class for rendering pages
--   Your page controllers/handlers
--   Built-in PHP features for everything else
+## Default Login
 
-Enjoy the simplicity of vanilla PHP with the power of modern frontend tooling!
+-   Email: admin@example.com
+-   Password: admin123
